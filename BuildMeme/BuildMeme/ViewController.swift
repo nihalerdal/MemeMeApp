@@ -7,14 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imagePickerView: UIImageView!
-    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var textFieldTop: UITextField!
+    @IBOutlet weak var textFieldButtom: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textFieldTop.delegate = self
+        textFieldButtom.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +62,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
+    
+
+        
+    func textFieldDidBeginEditing(_ textField: UITextField){
+            textField.text = ""
+        }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+   
+    
+    
+
+
     /*
     // MARK: - Navigation
 
