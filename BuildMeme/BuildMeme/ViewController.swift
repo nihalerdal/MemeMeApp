@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var textFieldTop: UITextField!
-    @IBOutlet weak var textFieldButtom: UITextField!
+    @IBOutlet weak var textFieldBottom: UITextField!
     
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.strokeColor: UIColor.black,
@@ -26,16 +26,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          super.viewDidLoad()
         
         textFieldTop.delegate = self
-        textFieldButtom.delegate = self
+        textFieldBottom.delegate = self
   
          textFieldTop.text = "TOP"
-         textFieldButtom.text = "BOTTOM"
+         textFieldBottom.text = "BOTTOM"
   
          textFieldTop.defaultTextAttributes = memeTextAttributes
-         textFieldButtom.defaultTextAttributes = memeTextAttributes
+         textFieldBottom.defaultTextAttributes = memeTextAttributes
  
          textFieldTop.textAlignment = .center
-         textFieldButtom.textAlignment = .center
+         textFieldBottom.textAlignment = .center
      }
     
     
@@ -93,11 +93,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-
-        
+    
+    
     func textFieldDidBeginEditing(_ textField: UITextField){
+        
+        if textField.text == "TOP" || textField.text == "BOTTOM" { //-> to clear for the first time only.
             textField.text = ""
         }
+    }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -125,7 +128,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func keyboardWillShow(_ notification:Notification) {
         
-        if textFieldButtom.isEditing { //-> only for buttom text
+        if textFieldBottom.isEditing { //-> only for buttom text
             view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
