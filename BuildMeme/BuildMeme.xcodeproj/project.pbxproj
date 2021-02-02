@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95A92F0E25C3BF120075BD59 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A92F0D25C3BF120075BD59 /* Meme.swift */; };
 		95D7742125C0E4B100D04E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7742025C0E4B100D04E4C /* AppDelegate.swift */; };
 		95D7742325C0E4B100D04E4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7742225C0E4B100D04E4C /* SceneDelegate.swift */; };
 		95D7742825C0E4B100D04E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7742625C0E4B100D04E4C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95A92F0D25C3BF120075BD59 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		95D7741D25C0E4B100D04E4C /* BuildMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7742025C0E4B100D04E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D7742225C0E4B100D04E4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				95D7742025C0E4B100D04E4C /* AppDelegate.swift */,
 				95D7742225C0E4B100D04E4C /* SceneDelegate.swift */,
 				95D7743625C0E52800D04E4C /* ViewController.swift */,
+				95A92F0D25C3BF120075BD59 /* Meme.swift */,
 				95D7742625C0E4B100D04E4C /* Main.storyboard */,
 				95D7742925C0E4B300D04E4C /* Assets.xcassets */,
 				95D7742B25C0E4B300D04E4C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D7743725C0E52800D04E4C /* ViewController.swift in Sources */,
+				95A92F0E25C3BF120075BD59 /* Meme.swift in Sources */,
 				95D7742125C0E4B100D04E4C /* AppDelegate.swift in Sources */,
 				95D7742325C0E4B100D04E4C /* SceneDelegate.swift in Sources */,
 			);

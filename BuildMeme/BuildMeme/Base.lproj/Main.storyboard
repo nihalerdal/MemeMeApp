@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-OE-fvq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="681"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-Sk-M4B">
-                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
                                     <barButtonItem width="120" style="plain" systemItem="fixedSpace" id="ZYW-xG-R7e"/>
                                     <barButtonItem title="Item" image="camera.fill" catalog="system" id="eHk-zw-JMa">
@@ -45,17 +45,19 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jYF-Y6-K0W">
-                                <rect key="frame" x="25" y="696.5" width="364" height="57.5"/>
+                                <rect key="frame" x="25" y="691.5" width="364" height="57.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-rq-MhL">
-                                <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBw-a7-WX4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="4lE-N0-8gS">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="j4Z-0z-eiE"/>
+                                    <navigationItem title="Title" id="UKo-Qi-Sbp">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="Dhw-Uw-awv"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Qha-U2-MnB"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -68,18 +70,14 @@
                             <constraint firstItem="VBc-Sk-M4B" firstAttribute="top" secondItem="jYF-Y6-K0W" secondAttribute="bottom" constant="15" id="F1v-Nx-VSg"/>
                             <constraint firstItem="xgA-OE-fvq" firstAttribute="leading" secondItem="5oZ-CG-hrn" secondAttribute="leading" id="I4P-a2-PVa"/>
                             <constraint firstItem="VBc-Sk-M4B" firstAttribute="trailing" secondItem="5oZ-CG-hrn" secondAttribute="trailing" id="JAh-RG-h4r"/>
-                            <constraint firstItem="bAh-KB-GFT" firstAttribute="top" secondItem="gdT-rq-MhL" secondAttribute="bottom" constant="15" id="Nuq-3h-eY0"/>
+                            <constraint firstItem="bAh-KB-GFT" firstAttribute="top" secondItem="5oZ-CG-hrn" secondAttribute="top" constant="59" id="JIC-sV-uHX"/>
+                            <constraint firstItem="xgA-OE-fvq" firstAttribute="top" secondItem="5oZ-CG-hrn" secondAttribute="top" constant="44" id="Kca-ez-TSk"/>
                             <constraint firstItem="5oZ-CG-hrn" firstAttribute="trailing" secondItem="xgA-OE-fvq" secondAttribute="trailing" id="P6c-kI-3hP"/>
                             <constraint firstItem="5oZ-CG-hrn" firstAttribute="trailing" secondItem="bAh-KB-GFT" secondAttribute="trailing" constant="25" id="TkC-FF-3dr"/>
                             <constraint firstItem="VBc-Sk-M4B" firstAttribute="bottom" secondItem="5oZ-CG-hrn" secondAttribute="bottom" id="UK4-dX-jqY"/>
-                            <constraint firstItem="xgA-OE-fvq" firstAttribute="top" secondItem="gdT-rq-MhL" secondAttribute="bottom" id="Vnz-Oj-7eY"/>
                             <constraint firstItem="VBc-Sk-M4B" firstAttribute="top" secondItem="xgA-OE-fvq" secondAttribute="bottom" id="ZkU-Pd-lRI"/>
-                            <constraint firstItem="gdT-rq-MhL" firstAttribute="top" secondItem="5oZ-CG-hrn" secondAttribute="top" id="dmw-cH-ffc"/>
-                            <constraint firstItem="xgA-OE-fvq" firstAttribute="top" secondItem="gdT-rq-MhL" secondAttribute="bottom" id="ggE-Li-DSk"/>
-                            <constraint firstItem="gdT-rq-MhL" firstAttribute="leading" secondItem="5oZ-CG-hrn" secondAttribute="leading" id="iy0-W6-CG1"/>
                             <constraint firstItem="xgA-OE-fvq" firstAttribute="trailing" secondItem="5oZ-CG-hrn" secondAttribute="trailing" id="jaD-Pw-QqT"/>
                             <constraint firstItem="5oZ-CG-hrn" firstAttribute="trailing" secondItem="jYF-Y6-K0W" secondAttribute="trailing" constant="25" id="jwo-Dc-O9N"/>
-                            <constraint firstItem="gdT-rq-MhL" firstAttribute="trailing" secondItem="5oZ-CG-hrn" secondAttribute="trailing" id="s8L-1b-h8u"/>
                             <constraint firstItem="bAh-KB-GFT" firstAttribute="leading" secondItem="5oZ-CG-hrn" secondAttribute="leading" constant="25" id="sAN-Nt-Lbr"/>
                         </constraints>
                     </view>
@@ -90,6 +88,7 @@
                         <outlet property="imagePickerView" destination="xgA-OE-fvq" id="49g-uz-r2e"/>
                         <outlet property="textFieldBottom" destination="jYF-Y6-K0W" id="kRc-xc-NoM"/>
                         <outlet property="textFieldTop" destination="bAh-KB-GFT" id="QEP-h9-GOR"/>
+                        <outlet property="toolBar" destination="VBc-Sk-M4B" id="w7K-HW-ALZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cR-bP-k03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,6 +98,7 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
