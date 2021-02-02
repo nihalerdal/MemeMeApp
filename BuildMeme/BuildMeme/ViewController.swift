@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textFieldBottom: UITextField!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.strokeColor: UIColor.black,
@@ -45,6 +46,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        shareButton.isEnabled = false
         
         //**1** Sign up to be notified when the keyboard appears
         super.viewWillAppear(animated)
@@ -66,6 +68,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
+        
       
     }
     
@@ -75,6 +78,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
+        
       
     }
     //2.1 After opening gallery, when user select a photo :
@@ -85,7 +89,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
             imagePickerView.image = image
         
-        
+        shareButton.isEnabled = true
         dismiss(animated: true, completion: nil)
     }
     
@@ -183,7 +187,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
 
-
+    @IBAction func share(_ sender: Any) {
+        
+        let sharedMemedImage = generateMemedImage()
+        let activityController = UIActivityViewController(activityItems: [sharedMemedImage], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+        
+        activityController.completionWithItemsHandler = {(activity, success, items, error) in
+            if (success) {
+                self.save()
+            }
+        }
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        shareButton.isEnabled = false
+        imagePickerView.image = nil
+        textFieldTop.text = "TOP"
+        textFieldBottom.text = "BOTTOM"
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -39,7 +39,7 @@
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-KB-GFT">
                                 <rect key="frame" x="25" y="103" width="364" height="57.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -56,8 +56,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="UKo-Qi-Sbp">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="Dhw-Uw-awv"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Qha-U2-MnB"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="Dhw-Uw-awv">
+                                            <connections>
+                                                <action selector="share:" destination="oAq-Di-rgg" id="rNm-BF-wrb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Qha-U2-MnB">
+                                            <connections>
+                                                <action selector="cancel:" destination="oAq-Di-rgg" id="ya4-Ff-sRh"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -86,6 +94,8 @@
                         <outlet property="ImagePickerView" destination="xgA-OE-fvq" id="yK0-RB-abZ"/>
                         <outlet property="cameraButton" destination="eHk-zw-JMa" id="Yhi-wk-Twl"/>
                         <outlet property="imagePickerView" destination="xgA-OE-fvq" id="49g-uz-r2e"/>
+                        <outlet property="navigationBar" destination="LBw-a7-WX4" id="beA-Bl-cfn"/>
+                        <outlet property="shareButton" destination="Dhw-Uw-awv" id="3W0-AO-ug4"/>
                         <outlet property="textFieldBottom" destination="jYF-Y6-K0W" id="kRc-xc-NoM"/>
                         <outlet property="textFieldTop" destination="bAh-KB-GFT" id="QEP-h9-GOR"/>
                         <outlet property="toolBar" destination="VBc-Sk-M4B" id="w7K-HW-ALZ"/>
@@ -99,6 +109,9 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
