@@ -59,25 +59,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    // 1.When the user tap the Pick button, it provide the open photo gallery(picker controller)
-    @IBAction func pickAnImageFromGallery(_ sender: Any) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-        
-        
+    // 1.When the user tap the button, it provides to open either photo gallery or camera (picker controller)
+    func chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
     
-    @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
-        
-        
+    @IBAction func chooseFromCamera(_ sender: Any) {
+        chooseImageFromCameraOrPhoto(source: .camera)
+    }
+    
+    
+    @IBAction func chooseFromAlbum(_ sender: Any) {
+        chooseImageFromCameraOrPhoto(source: .photoLibrary)
     }
     //2.1 After opening gallery, when user select a photo :
     func imagePickerController(_ picker: UIImagePickerController,
