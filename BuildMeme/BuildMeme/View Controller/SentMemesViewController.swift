@@ -7,8 +7,14 @@
 
 import UIKit
 
-class SentMemesViewController: UIViewController {
-
+class SentMemesViewController: UIViewController, UITableViewDelegate {
+    
+    var memes: [Meme]! {
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        return appDelegate.memes
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
