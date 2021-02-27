@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952DEEE225E9C64A002ABA32 /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952DEEE125E9C64A002ABA32 /* SentMemesCollectionViewController.swift */; };
+		952DEEE525E9C697002ABA32 /* SentMemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952DEEE425E9C697002ABA32 /* SentMemesViewController.swift */; };
+		952DEEF225E9CE32002ABA32 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952DEEF125E9CE32002ABA32 /* MemeTableViewCell.swift */; };
+		952DEEF725E9CE90002ABA32 /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952DEEF625E9CE90002ABA32 /* MemeCollectionViewCell.swift */; };
 		95A92F0E25C3BF120075BD59 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A92F0D25C3BF120075BD59 /* Meme.swift */; };
 		95D7742125C0E4B100D04E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7742025C0E4B100D04E4C /* AppDelegate.swift */; };
 		95D7742325C0E4B100D04E4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7742225C0E4B100D04E4C /* SceneDelegate.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		952DEEE125E9C64A002ABA32 /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		952DEEE425E9C697002ABA32 /* SentMemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesViewController.swift; sourceTree = "<group>"; };
+		952DEEF125E9CE32002ABA32 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		952DEEF625E9CE90002ABA32 /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		95A92F0D25C3BF120075BD59 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		95D7741D25C0E4B100D04E4C /* BuildMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7742025C0E4B100D04E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		952DEEE725E9CC91002ABA32 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				95A92F0D25C3BF120075BD59 /* Meme.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		952DEEE925E9CC9F002ABA32 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95D7743625C0E52800D04E4C /* ViewController.swift */,
+				952DEEE125E9C64A002ABA32 /* SentMemesCollectionViewController.swift */,
+				952DEEE425E9C697002ABA32 /* SentMemesViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		952DEEEF25E9CD62002ABA32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95D7742625C0E4B100D04E4C /* Main.storyboard */,
+				95D7742025C0E4B100D04E4C /* AppDelegate.swift */,
+				95D7742225C0E4B100D04E4C /* SceneDelegate.swift */,
+				95D7742925C0E4B300D04E4C /* Assets.xcassets */,
+				95D7742B25C0E4B300D04E4C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		952DEEF525E9CE5C002ABA32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				952DEEF125E9CE32002ABA32 /* MemeTableViewCell.swift */,
+				952DEEF625E9CE90002ABA32 /* MemeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		95D7741425C0E4B100D04E4C = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +105,11 @@
 		95D7741F25C0E4B100D04E4C /* BuildMeme */ = {
 			isa = PBXGroup;
 			children = (
-				95D7742025C0E4B100D04E4C /* AppDelegate.swift */,
-				95D7742225C0E4B100D04E4C /* SceneDelegate.swift */,
-				95D7743625C0E52800D04E4C /* ViewController.swift */,
-				95A92F0D25C3BF120075BD59 /* Meme.swift */,
-				95D7742625C0E4B100D04E4C /* Main.storyboard */,
-				95D7742925C0E4B300D04E4C /* Assets.xcassets */,
-				95D7742B25C0E4B300D04E4C /* LaunchScreen.storyboard */,
 				95D7742E25C0E4B300D04E4C /* Info.plist */,
+				952DEEEF25E9CD62002ABA32 /* Resources */,
+				952DEEE925E9CC9F002ABA32 /* View Controller */,
+				952DEEF525E9CE5C002ABA32 /* View */,
+				952DEEE725E9CC91002ABA32 /* Modal */,
 			);
 			path = BuildMeme;
 			sourceTree = "<group>";
@@ -140,8 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952DEEE525E9C697002ABA32 /* SentMemesViewController.swift in Sources */,
 				95D7743725C0E52800D04E4C /* ViewController.swift in Sources */,
+				952DEEF725E9CE90002ABA32 /* MemeCollectionViewCell.swift in Sources */,
 				95A92F0E25C3BF120075BD59 /* Meme.swift in Sources */,
+				952DEEE225E9C64A002ABA32 /* SentMemesCollectionViewController.swift in Sources */,
+				952DEEF225E9CE32002ABA32 /* MemeTableViewCell.swift in Sources */,
 				95D7742125C0E4B100D04E4C /* AppDelegate.swift in Sources */,
 				95D7742325C0E4B100D04E4C /* SceneDelegate.swift in Sources */,
 			);
@@ -278,6 +326,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -291,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = BuildMeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,11 +359,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = BuildMeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nihalerdal.BuildMeme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

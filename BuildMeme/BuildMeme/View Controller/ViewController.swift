@@ -158,7 +158,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let image = imagePickerView.image else {return}
         
         
-        _ = Meme(textTop: textTop, textBottom: textBottom, image: image, memed: generateMemedImage() )
+        let meme = Meme(textTop: textTop, textBottom: textBottom, image: image, memed: generateMemedImage() )
+        
+        //for sharing data -> to add to AppDelegate
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        guard let appDelegate = object as? AppDelegate else {return}
+        appDelegate.memes.append(meme)
         
     }
     
