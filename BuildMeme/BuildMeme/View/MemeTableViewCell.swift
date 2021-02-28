@@ -9,10 +9,6 @@ import UIKit
 
 class MemeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var tableCellImageView: UIImageView!
-    
-    @IBOutlet weak var memeTitle: UITextField!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
