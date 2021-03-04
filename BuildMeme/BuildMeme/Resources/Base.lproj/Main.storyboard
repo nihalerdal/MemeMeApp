@@ -37,7 +37,7 @@
                                     </subviews>
                                 </view>
                                 <connections>
-                                    <outlet property="imageview" destination="URV-0B-5m2" id="c6Y-ZT-fPO"/>
+                                    <outlet property="imageview" destination="URV-0B-5m2" id="qYn-DQ-QdD"/>
                                     <segue destination="kRF-ji-Q8L" kind="show" id="xcB-fI-OjJ"/>
                                 </connections>
                             </collectionViewCell>
@@ -307,8 +307,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HAG-Hf-Btj"/>
-        <segue reference="3q1-nc-MkJ"/>
+        <segue reference="IBc-k7-Uef"/>
+        <segue reference="xcB-fI-OjJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
