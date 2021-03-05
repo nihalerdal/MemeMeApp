@@ -25,6 +25,13 @@ class SentMemesViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+     
+       self.viewDidLoad()
+       tableView.reloadData()
+     
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }

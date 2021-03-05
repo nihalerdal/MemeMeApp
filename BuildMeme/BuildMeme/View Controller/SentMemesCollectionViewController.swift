@@ -22,6 +22,9 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
         let space:CGFloat = 3.0
         let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
         let heighDimension = (view.frame.size.height - (2 * space)) / 5.0
@@ -35,11 +38,18 @@ class SentMemesCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+    
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+   
+           super.viewWillAppear(animated)
+           collectionView!.reloadData()
+   
+       }
 
     /*
     // MARK: - Navigation
