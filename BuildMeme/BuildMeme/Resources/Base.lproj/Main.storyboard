@@ -119,7 +119,7 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="CLp-BQ-hDu">
             <objects>
-                <viewController id="kRF-ji-Q8L" customClass="MemeDetailViewController" customModule="BuildMeme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="kRF-ji-Q8L" customClass="MemeDetailViewController" customModule="BuildMeme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rmT-wI-kTO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,8 +317,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IBc-k7-Uef"/>
-        <segue reference="xcB-fI-OjJ"/>
+        <segue reference="HAG-Hf-Btj"/>
+        <segue reference="3q1-nc-MkJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>

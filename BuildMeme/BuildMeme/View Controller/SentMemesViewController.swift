@@ -48,7 +48,8 @@ class SentMemesViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(identifier: "MemeDetailViewController") as? MemeDetailViewController else {return}
-        vc.imageView.image = meme?.memed
+        guard let meme = meme else {return}
+        vc.imageView.image = meme.memed
         navigationController?.pushViewController(vc, animated: true)
         
         
