@@ -25,6 +25,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         setupTextField(tf: textFieldTop, text: "TOP")
         setupTextField(tf: textFieldBottom, text: "BOTTOM")
+        tabBarController?.tabBar.isHidden = true
+        
     }
     
     
@@ -49,6 +51,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //**1** Sign up to be notified when the keyboard appears
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
+        
         
     }
     
@@ -81,6 +84,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         
         guard let image = info[.originalImage] as? UIImage else {return}
+        
+//once you select the photo, if you want to use cropped version: choose .editiedImage
+        
+//        if let image = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.editedImage.rawValue)] as? UIImage {
         
         imagePickerView.image = image
         
@@ -166,6 +173,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let object = UIApplication.shared.delegate
         guard let appDelegate = object as? AppDelegate else {return}
         appDelegate.memes.append(meme)
+        dismiss(animated: true, completion: nil)
         
     }
     
@@ -203,10 +211,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cancel(_ sender: Any) {
+        
+       
         shareButton.isEnabled = false
         imagePickerView.image = nil
         textFieldTop.text = "TOP"
         textFieldBottom.text = "BOTTOM"
+        
+        
+        dismiss(animated: true, completion: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     /*

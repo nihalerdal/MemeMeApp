@@ -7,9 +7,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "CollectionCell"
 
-class SentMemesCollectionViewController: UICollectionViewController {
+class SentMemesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
@@ -33,6 +33,8 @@ class SentMemesCollectionViewController: UICollectionViewController {
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: widthDimension, height: heighDimension)
+        
+        
     
 
         // Uncomment the following line to preserve selection between presentations
@@ -47,7 +49,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
    
            super.viewWillAppear(animated)
-           collectionView!.reloadData()
+           collectionView.reloadData()
    
        }
 
@@ -78,10 +80,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! MemeCollectionViewCell
         let memeForCell = memes[indexPath.row]
         cell.imageview.image = memeForCell.memed
-        
-        
-    
-        // Configure the cell
     
         return cell
     }
