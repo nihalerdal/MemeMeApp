@@ -50,6 +50,7 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
    
            super.viewWillAppear(animated)
            collectionView.reloadData()
+        tabBarController?.tabBar.isHidden = false
    
        }
 
@@ -87,12 +88,27 @@ class SentMemesCollectionViewController: UICollectionViewController, UICollectio
  
     // MARK: UICollectionViewDelegate
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "MemeDetailViewController") as? MemeDetailViewController else {return}
-        vc.imageView.image = meme?.memed
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        guard let vc = storyboard?.instantiateViewController(identifier: "MemeDetailViewController") as? MemeDetailViewController else {return}
+//
+//        vc.meme = memes[indexPath.row]
+//        vc.memeIndex = indexPath.row
+//
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailCellSegue" {
+            if let vc = segue.destination as? MemeDetailViewController ,
+               let indexPath = collectionView.indexPathsForSelectedItems?.first  {
+            let detailMeme = memes[indexPath.row]
+            vc.meme = detailMeme
+            }
+        }
+    }
+    
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

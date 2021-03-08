@@ -16,6 +16,7 @@ class MemeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
+     
         
 
         // Do any additional setup after loading the view.

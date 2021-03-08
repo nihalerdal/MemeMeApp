@@ -38,7 +38,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="imageview" destination="URV-0B-5m2" id="qYn-DQ-QdD"/>
-                                    <segue destination="kRF-ji-Q8L" kind="show" id="xcB-fI-OjJ"/>
+                                    <segue destination="kRF-ji-Q8L" kind="show" identifier="DetailCellSegue" id="xcB-fI-OjJ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -82,7 +82,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="kRF-ji-Q8L" kind="show" id="3q1-nc-MkJ"/>
+                                            <segue destination="kRF-ji-Q8L" kind="show" identifier="DetailRowSegue" id="3q1-nc-MkJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -316,7 +316,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="IBc-k7-Uef"/>
-        <segue reference="xcB-fI-OjJ"/>
+        <segue reference="3q1-nc-MkJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
