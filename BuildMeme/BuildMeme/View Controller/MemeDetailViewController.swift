@@ -15,13 +15,18 @@ class MemeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
         
-        guard let meme = meme else {return}
-        imageView.image = meme.memed
 
         // Do any additional setup after loading the view.
     }
     
+    func updateView(){
+        
+        guard let meme = meme else {return}
+        imageView.image = meme.memed
+        
+    }
 
     /*
     // MARK: - Navigation
